@@ -45,7 +45,7 @@ func ScrapeVideoLinks(pID string) ([]string, error) {
 
 	wg.Add(1)
 	if c.Visit("https://www.youtube.com/playlist?list="+pID) != nil {
-		log.Fatal(ErrCollyScrapeFail)
+		err = ErrCollyScrapeFail
 	}
 
 	wg.Wait()
