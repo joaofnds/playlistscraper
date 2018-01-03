@@ -9,10 +9,10 @@ import (
 )
 
 var (
-	// ErrEmptyPlaylistID ...
-	ErrEmptyPlaylistID = fmt.Errorf("Empty Playlist ID")
+	// ErrEmptyPlaylistID
+	ErrEmptyPlaylistID = fmt.Errorf("empty playlist id")
 	// ErrCollyScrapeFail ...
-	ErrCollyScrapeFail = fmt.Errorf("Colly failed to scrape")
+	ErrCollyScrapeFail = fmt.Errorf("colly failed to scrape")
 )
 
 // ScrapeVideoLinks gets a youtube playlist ID, scrape links from it's videos(up to 100 links), and them return them
