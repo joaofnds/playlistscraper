@@ -18,7 +18,7 @@ func TestScrapeVideoLinks(t *testing.T) {
 	}
 
 	if reflect.TypeOf(links) != reflect.SliceOf(reflect.TypeOf("")) {
-		t.Errorf("Expect links to be []string, but got: %T\n", links)
+		t.Errorf("Expect links to be of type []string, but got: %T\n", links)
 	}
 
 	for _, l := range links {
@@ -27,5 +27,3 @@ func TestScrapeVideoLinks(t *testing.T) {
 		}
 	}
 }
-
-// TODO: Add http tests
