@@ -2,7 +2,6 @@ package playlistscraper
 
 import (
 	"fmt"
-	"log"
 	"sync"
 
 	"github.com/gocolly/colly"
