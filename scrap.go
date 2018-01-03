@@ -9,17 +9,21 @@ import (
 )
 
 var (
-	// ErrEmptyPlaylistID
+	// ErrEmptyPlaylistID is the error returned when a empty playlist id is received
 	ErrEmptyPlaylistID = fmt.Errorf("empty playlist id")
-	// ErrCollyScrapeFail ...
+
+	// ErrCollyScrapeFail is the error returned when a colly Visit resulted in an error
 	ErrCollyScrapeFail = fmt.Errorf("colly failed to scrape")
 )
 
-// ScrapeVideoLinks gets a youtube playlist ID, scrape links from it's videos(up to 100 links), and them return them
+// ScrapeVideoLinks gets a youtube playlist ID,
+// scrape links from it's videos(up to 100 links),
+// and them return them
 func ScrapeVideoLinks(pID string) ([]string, error) {
 	if pID == "" {
 		return nil, ErrEmptyPlaylistID
 	}
+
 	c := colly.NewCollector()
 
 	var links []string
