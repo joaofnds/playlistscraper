@@ -15,9 +15,8 @@ var (
 	ErrCollyScrapeFail = fmt.Errorf("colly failed to scrape")
 )
 
-// ScrapeVideoLinks gets a youtube playlist ID,
-// scrape links from it's videos(up to 100 links),
-// and them return them
+// ScrapeVideoLinks scrape the individual video links of the
+// provided youtube playlist id
 func ScrapeVideoLinks(pID string) ([]string, error) {
 	if pID == "" {
 		return nil, ErrEmptyPlaylistID
